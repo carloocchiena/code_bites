@@ -1,0 +1,15 @@
+#check whether a given argument contains a set of parameters given in a list or an external dataset 
+
+def checkletter(string):
+    alfa=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y","z"]
+    string=string.lower()
+    for i in string:
+        if i in alfa:
+            alfa.remove(i)
+        if alfa==[]:
+            return True
+    print (alfa)
+    
+    #check if a function is a palyndrome
+    def palindrome(s):
+      return s==s[::-1]

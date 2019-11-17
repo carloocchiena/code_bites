@@ -6,6 +6,18 @@ Created on Sat Nov 16 18:45:21 2019
 """
 
 
+'''
+possibilità per sviluppare il gioco con 1 player vs computer:
+al turno del computer, per prima cosa la prima mossa sarà del tipo: se libero al centro metti al centro, se no metti in angolo.
+poi le mosse successive saranno del tipo: contrasta il tris del player uno, a meno che tu non possa fare tris e allora lo dovrai fare.
+per fare questo, creare una serie di if con tutte le combinazioni da tracciare, partendo da quelle dove il computer può vincere (che vanno eseguite per prime) e finendo a quelle dove il computer 
+deve evitare di perdere. non lunghissimo, fattibile.
+
+per poi contare il match in parità, invece di contare le mosse, sarebbe più sensato verificare se nella board esistono degli zeri
+
+
+'''
+
 #tictactoe demo game 
 
 #variabili globali

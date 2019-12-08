@@ -1,3 +1,3 @@
 # Raw-Python
 Raw Python Projects
-just raw and quite old python experiments
+My personal collection of python codes and experiments

@@ -63,3 +63,8 @@ for rt in risetimes:
     print (time)
     
 print (time)
+
+
+#in case a login is needed:
+
+requests.get('https://api.github.com/user', auth=('user', 'pass'))

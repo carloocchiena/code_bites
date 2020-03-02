@@ -1,0 +1,17 @@
+def pdfreader():
+    import PyPDF2
+    my_bolletta="carlo.pdf" #la bolletta deve essere salvata nel folder della funzione
+    my_file= open(my_bolletta, mode="rb")
+    pdf_reader = PyPDF2.PdfFileReader(my_file)
+    page_one = pdf_reader.getPage(0)
+    temp = page_one.extractText()
+    bolletta = str(temp)
+    alfa=bolletta.split()
+    
+    for i in alfa:
+        if "POD" in i:
+            print (f"POD:{i[3:17]}\n")
+        if "FISCALE" in i:
+            print (f"CF:{i[7:23]}\n")
+    
+    print (f"L'intera bolletta è questa:\n{bolletta}")

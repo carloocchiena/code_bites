@@ -11,6 +11,8 @@ def pdfreader():
     for i in alfa:
         if "POD" in i:
             print (f"POD:{i[3:17]}\n")
+        if "PDR" in i:
+            print (f"PDR:{i[3:17]}\n")
         if "FISCALE" in i:
             print (f"CF:{i[7:23]}\n")
     

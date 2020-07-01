@@ -17,7 +17,7 @@ soup1 = BS4(coverpage, "html.parser")   #creo la zuppa
 
 print(soup1.prettify())   #per stampare tutto html della pagina in modo ordinato con tutti i tag e le tab così analizzo quel che mi serve
 
-price1 = soup1.findAll(class_="c-definition-list-alt__value")   #scandaglio html e trovo il tag, class, div che mi interessa, in questo caso la classe relativa ai prezzi
+price1 = soup1.find_all(class_="c-definition-list-alt__value")   #scandaglio html e trovo il tag, class, div che mi interessa, in questo caso la classe relativa ai prezzi
 
 
 

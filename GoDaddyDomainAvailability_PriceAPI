@@ -4,8 +4,8 @@ import json
 import time
 
 #GoDaddyAPI Private Keys
-ApiKey = "yourkey"
-SecretKey = "yoursecretkey"
+ApiKey = "your ApiKey"
+SecretKey = "your SecretKey"
 
 #connecting to server
 headers = {"Authorization" : "sso-key {}:{}".format(ApiKey, SecretKey)}
@@ -13,10 +13,14 @@ headers = {"Authorization" : "sso-key {}:{}".format(ApiKey, SecretKey)}
 #GoDaddy API endpoints
 url = "https://api.godaddy.com/v1/domains/available"
 
-#Getting user input for domain TBE  
-domain = input("Insert the domains you'd like to check.\nName format should be 'DomainName.DomainExtension' ex. 'Google.com'\n")
+#Getting user input for the second level domain to be searched  
+domain_tld = input("Insert the domains you'd like to check.\nName format should be just the domain name (SLD)\nseparated by a space\n")
 
-domain = domain.split()
+domain_notld = domain_tld.split()
+
+domain=[]
+for i in domain_notld:
+    domain.append(i+".com")
 
 #API call (POST)
 availability_res = requests.post(url, json=domain, headers=headers)

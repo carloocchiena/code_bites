@@ -1,0 +1,33 @@
+#importing libraries
+import requests
+import json
+import time
+
+#GoDaddyAPI Private Keys
+ApiKey = "yourkey"
+SecretKey = "yoursecretkey"
+
+#connecting to server
+headers = {"Authorization" : "sso-key {}:{}".format(ApiKey, SecretKey)}
+
+#GoDaddy API endpoints
+url = "https://api.godaddy.com/v1/domains/available"
+
+#Getting user input for domain TBE  
+domain = input("Insert the domains you'd like to check.\nName format should be 'DomainName.DomainExtension' ex. 'Google.com'\n")
+
+domain = domain.split()
+
+#API call (POST)
+availability_res = requests.post(url, json=domain, headers=headers)
+
+#Getting back the result to the user 
+for domain in json.loads(availability_res.text)['domains']:
+    if domain['available']:
+        print ("Domain Name:", domain["domain"])
+        print ("Domain Stats Availability:", domain["available"])
+        print ("USD Price:", int(domain["price"])/10**6, "\n")
+    else:
+        print ("Domain Name:", domain["domain"])
+        print ("Domain Stats Availability:", domain["available"], "\n")
+time.sleep(2)

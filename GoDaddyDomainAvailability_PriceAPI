@@ -14,7 +14,8 @@ headers = {"Authorization" : "sso-key {}:{}".format(ApiKey, SecretKey)}
 url = "https://api.godaddy.com/v1/domains/available"
 
 #Getting user input for the second level domain to be searched  
-domain_tld = input("Insert the domains you'd like to check.\nName format should be just the domain name (SLD)\nseparated by a space\n")
+domain_tld = input("Insert the domains you'd like to check.\nName format should be just the domain name (SLD)\nseparated by a space:\n")
+print (" ")
 
 domain_notld = domain_tld.split()
 

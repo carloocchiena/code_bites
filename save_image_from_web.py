@@ -1,3 +1,7 @@
+import requests 
+from bs4 import BeautifulSoup
+
+
 url = "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)"   #url of the target page with the images we want to acquire 
 
 request = requests.get(url)   #create the request

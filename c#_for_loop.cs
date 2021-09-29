@@ -6,10 +6,18 @@ namespace ForLoop
   {
     static void Main(string[] args)
     { 
-      
+      // for loop
       for (int i = 1; i<17; i++) {
         int week = i;
         CreateTemplate(i);
+      }
+      
+      string[] items = { "potion", "dagger", "shield", "plant" };
+      
+      // for each loop
+      foreach (string item in items)
+      {
+      Console.WriteLine(item);
       }
 
     }

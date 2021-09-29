@@ -1,4 +1,7 @@
 # code_chunks
-Little chunks of functions that comes in handy and I'd like to store in a convenient place
+Little chunks of functions that comes in handy. For bookmarking and memo.
+
+Mostly Python.
+Then C++, C#, Java.
 
 

@@ -1,14 +1,10 @@
 #import the lib we need: requests for api, json to read the javascript output, datetime to convert the time format 
 
-import requests as req
+import requests
 import json
 from datetime import datetime
 
-
-#for simplicity's sake, let's assign to r the req.get() in the format reg.get("url") to retrieve the data from the api
-
-r= req.get("http://api.open-notify.org/astros.json")
-
+r= requests.get("http://api.open-notify.org/astros.json")
 
 #r.status_code allows us to  check the connection status (with typical server response: 200, 404, 301..)
 print(r.status_code)
@@ -33,8 +29,7 @@ jprint (r.json())
 
 parameters={"lat":44.4037, "lon":8.6756 }
 
-
-r= req.get("http://api.open-notify.org/iss-pass.json", params=parameters)
+r= requests.get("http://api.open-notify.org/iss-pass.json", params=parameters)
    
 jprint (r.json())
 

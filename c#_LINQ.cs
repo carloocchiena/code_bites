@@ -63,6 +63,28 @@ namespace LearnLinq
                             .Where(h => h.Length > 6)
                             .Select(h => h.ToUpper());
 
+      var dude = heroes.Select(h => $"Introducing...{h}!");
+
+      var test = from hero in heroes
+      where hero.Contains(" ")
+      select hero.IndexOf(" ");
+
+      var caso = heroes
+      .Where(h=> h.Contains(" "))
+      .Select(h=> h.IndexOf(" "));
+
+      foreach (string i in dude) {
+        Console.WriteLine(i);
+      }
+
+      foreach (int i in test) {
+        Console.WriteLine(i);
+      }
+
+      foreach (int i in caso) {
+        Console.WriteLine(i);
+      }
+      
       
     }
   }

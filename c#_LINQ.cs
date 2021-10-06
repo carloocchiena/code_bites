@@ -34,6 +34,15 @@ namespace LearnLinq
       {
         Console.WriteLine(hero);
       }
+        
+      var heroesWithI = from hero in heroes
+                        where hero.Contains("i")
+                        select hero; 
+
+      var underscored = from hero in heroes
+                        select hero.Replace(" ", "_");
+
+      
     }
   }
 }

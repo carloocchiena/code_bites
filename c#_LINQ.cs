@@ -48,6 +48,20 @@ namespace LearnLinq
       foreach (string hero in heroesWithI) {
         Console.WriteLine(hero);
       }
+      
+      // Query syntax
+      var longLoudheroes = from h in heroes
+      where h.Length > 6
+      select h.ToUpper();
+ 
+      // Method syntax - separate statements
+      var longHeroes = heroes.Where(h => h.Length > 6);
+      var longLoudHeroes = longHeroes.Select(h => h.ToUpper());
+
+      // Method syntax - chained expressions
+      var longLoudHeroes2 = heroes
+                            .Where(h => h.Length > 6)
+                            .Select(h => h.ToUpper());
 
       
     }

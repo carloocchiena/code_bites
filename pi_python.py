@@ -1,4 +1,5 @@
 #find first numbers of pi
+
 k = 1
 pi = 0
   

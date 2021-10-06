@@ -1,9 +1,10 @@
+import random
+
 def psw_maker():
-    import random
+    
     alpha="abcdefghijklmnopqrstuvwxyz"
     num="0123456789"
     spec="!'£$%&/()?^*+/-"
-    
     psw=""
     
     length=int(input("how many characters do you want your password to be?\n"))
@@ -12,4 +13,4 @@ def psw_maker():
         char=random.choice(alpha)+random.choice(num)+random.choice(spec)+random.choice(alpha.upper())
         psw += str(char)
         
-    print (psw[0:length]) 
+    return psw 

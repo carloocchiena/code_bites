@@ -41,6 +41,13 @@ namespace LearnLinq
 
       var underscored = from hero in heroes
                         select hero.Replace(" ", "_");
+      
+      //lambda method-syntax query 
+      var heroesWithI = heroes.Where(hero => hero.Contains("i"));
+
+      foreach (string hero in heroesWithI) {
+        Console.WriteLine(hero);
+      }
 
       
     }

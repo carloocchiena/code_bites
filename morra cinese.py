@@ -16,7 +16,6 @@ def morra():
       print ("Amico hai scelto un segno non valido, riprova")
       morra()  
 
-
     pcturn=random.choice(segni)
     print ("ora tocca a me...")
     time.sleep(0.5)
@@ -43,8 +42,8 @@ def morra():
         win==False  
       break
         
-
-morra()
+if name = "__main__":
+  morra()
 
 
 

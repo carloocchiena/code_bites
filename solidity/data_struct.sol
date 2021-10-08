@@ -6,7 +6,7 @@ pragma solidity ^0.5.1;
 
 contract smart_contract {
 
-    // define non-negative 256 bits int value
+    // define unsigned (non-negative) 256 bits int value
     // define a data structure that would allow key-value data type with mapping
     // define a time variable
     uint256 public people_count = 0;

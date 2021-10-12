@@ -8,7 +8,6 @@ for i in range(1000000):
         pi += 4/k 
     else: 
         pi -= 4/k 
-       
     k += 2
       
 print(pi) 

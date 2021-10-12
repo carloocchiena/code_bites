@@ -37,7 +37,7 @@ _start:
    mov	ecx,inp1          ;message to write
    mov	ebx,STDIN         ;file descriptor (std_in)
    mov	eax,SYS_READ      ;system call number (sys_read)
-   int	0x80               ;call kernel 
+   int	0x80              ;call kernel 
    
    ; ask for second digit
    mov	edx,len2          ;message length

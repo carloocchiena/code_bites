@@ -35,7 +35,7 @@ _start:
    ; read user input    
    mov	edx,2             ;message length 
    mov	ecx,inp1          ;message to write
-   mov	ebx,STDIN        ;file descriptor (std_in)
+   mov	ebx,STDIN         ;file descriptor (std_in)
    mov	eax,SYS_READ      ;system call number (sys_read)
    int	0x80               ;call kernel 
    
@@ -44,14 +44,14 @@ _start:
    mov	ecx,ask2          ;message to write
    mov	ebx,STDOUT        ;file descriptor (stdout)
    mov	eax,SYS_WRITE     ;system call number (sys_write)
-   int	0x80               ;call kernel
+   int	0x80              ;call kernel
    
    ; read user input    
    mov	edx,2             ;message length 
    mov	ecx,inp2          ;message to write
-   mov	ebx,STDIN        ;file descriptor (std_in)
+   mov	ebx,STDIN         ;file descriptor (std_in)
    mov	eax,SYS_READ      ;system call number (sys_read)
-   int	0x80               ;call kernel 
+   int	0x80              ;call kernel 
    
    ; moving the first number to eax register and second number to ebx
    ; and subtracting ascii '0' to convert it into a decimal number
@@ -62,19 +62,19 @@ _start:
    sub ebx, "0"
    
    add eax, ebx 
-   add eax, 0             ; add '0' to to convert the sum from decimal to ASCII
+   add eax, 0              ; add '0' to to convert the sum from decimal to ASCII
    
    
    ; print the sum
-   mov	edx,1          ;message length
-   mov	ecx,ans          ;message to write
-   mov	ebx,STDOUT        ;file descriptor (stdout)
-   mov	eax,SYS_WRITE     ;system call number (sys_write)
-   int	80h               ;call kernel
+   mov	edx,1              ;message length
+   mov	ecx,ans            ;message to write
+   mov	ebx,STDOUT         ;file descriptor (stdout)
+   mov	eax,SYS_WRITE      ;system call number (sys_write)
+   int	0x80               ;call kernel
 
 exit: 
 
     mov eax, SYS_EXIT
     xor ebx, ebx
-    int 80h
+    int 0x80 
    

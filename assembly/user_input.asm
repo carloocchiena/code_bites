@@ -1,7 +1,7 @@
 section .data 
-	userMsg db "enter a number:"
+	userMsg db "enter a number:" , 0xa 
 	lenUserMsg equ $-userMsg    ;get message length
-	dispMsg db "You have entered: "
+	dispMsg db "You have entered: " , 0xa 
 	lenDispMsg equ $-dispMsg
 
 section .bss    ;(uninitialized data)

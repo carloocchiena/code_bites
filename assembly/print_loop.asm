@@ -12,7 +12,7 @@ loop_one:
     mov [num], eax
     mov eax, 4 
     mov ebx, 1
-    push ecx
+    push ecx   ;add on top of stack
     
     mov ecx, num
     mov edx, 1

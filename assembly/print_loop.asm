@@ -22,7 +22,7 @@ loop_one:
     sub eax, "0"
     inc eax
     add eax, "0"
-    pop ecx
+    pop ecx   ;remove from top of stack
     loop loop_one
     
     mov eax,1 

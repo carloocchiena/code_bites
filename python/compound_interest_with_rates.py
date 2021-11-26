@@ -10,7 +10,7 @@ recurring_amount = 0
 maturity -= 1 # this to evaluate the recurring amout at the end of each year
 
 while maturity > 0:
-    temp = recurring * (1 + interest)**maturity
+    temp = recurring * (1 + interest) ** maturity
     maturity -= 1
     recurring_amount += temp
     

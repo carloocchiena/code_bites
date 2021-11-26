@@ -14,4 +14,4 @@ while maturity > 0:
     maturity -= 1
     recurring_amount += temp
     
-print(capital_amount + recurring_amount + recurring)    
+print(round(capital_amount + recurring_amount + recurring, 2))   

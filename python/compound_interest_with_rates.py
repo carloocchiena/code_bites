@@ -7,7 +7,7 @@ capital_amount = initial * (1 + interest)**maturity
 
 recurring_amount = 0
 
-maturity -= 1 # this to evaluate the recurring amout at the END of the first year
+maturity -= 1 # this to evaluate the recurring amout at the end of each year
 
 while maturity > 0:
     temp = recurring * (1 + interest)**maturity

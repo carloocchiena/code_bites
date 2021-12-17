@@ -1,16 +1,16 @@
-#a simple game: guess the number, receive advice from the system
+# a simple game: guess the number, receive advice from the system
 
-#import random function
+# import random function
 import random 
 
-#create a list from 1 to 100 included
+# create a list from 1 to 100 included
 lista=range(1,101)
 
-#randomply picking a number
+# randomly picking a number
 unknown_number=random.choice(lista)
 
-#uncomment to show the number picked
-#print unknown_number 
+# uncomment to show the number picked
+# print unknown_number 
 
 try:
   guess=int(raw_input("Pick a number from 1 to 100:"))
@@ -33,9 +33,6 @@ while guess != unknown_number:
     guess=int(raw_input())
       
 else:
-  print "whoa! that's great! Right number!"
-      
-      
-
-#print unknown_number
-
+  print "whoa! that's great! Right number!     
+  
+# print unknown_number

@@ -25,7 +25,7 @@ while star <= star_goal:
     space -= 1
     star += 2
 
-#with a function 
+# with a function 
     
 def py_pine_tree(pine_size=10):
     """Print a star-tree of a given size.

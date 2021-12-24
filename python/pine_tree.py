@@ -43,3 +43,6 @@ def py_pine_tree(pine_size=10):
         print (f"{' '  * space}{'*' * star}")
         space -= 1
         star += 2
+        
+ if __name__ == '__main__':
+    py_pine_tree()

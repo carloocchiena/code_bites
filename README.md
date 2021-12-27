@@ -1,4 +1,4 @@
 # code_chunks
-Little chunks of functions that comes in handy for other purposes, that I'd like to store on the fly.
+Little chunks of functions that comes in handy for other purposes, or something too little to have its own repo. 
 
 

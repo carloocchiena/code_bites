@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Sep 11 21:55:14 2017
-
-@author: Carlo
-"""
 import requests
 import json
 import time
@@ -58,8 +52,8 @@ def send_message(text, chat_id):
     url=URL+"sendMessage?text={}&chat_id={}".format(text, chat_id)
     get_url(url)
     
-#text, chat=get_last_chat_id_and_text(get_updates())
-#send_message(text, chat)
+# text, chat=get_last_chat_id_and_text(get_updates())
+# send_message(text, chat)
 
 def main():
     last_update_id = None
@@ -74,7 +68,6 @@ def main():
 if __name__=='__main__': 
     main()
     
-#Acknowledging the messages we've already seen
     
     
     

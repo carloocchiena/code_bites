@@ -9,4 +9,5 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 for i in range(1000):
     time.sleep(1)
     driver.get(url)
+    print(i, end="\r")
     

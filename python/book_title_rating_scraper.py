@@ -1,4 +1,4 @@
-#pick all the books from an ecommerce site where rating = two star, for all the pages of the website
+# pick all the books from an ecommerce site where rating = two star, for all the pages of the website
 
 two_star_books_list = []
 
@@ -13,4 +13,4 @@ for i in range (50):
     if len(book.select(".star-rating.Two")) != 0:
       two_star_books_list.append(book.select("a")[1]["title"])
 
-two_star_books_list[0]
+print(two_star_books_list[0])

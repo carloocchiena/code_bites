@@ -1,0 +1,18 @@
+<h1>
+  Welcome dear <span class="firstname">{firstname}</span>
+</h1>
+<h2>
+  I see you're interested in <span class="interest">{interest}</span>
+</h2>
+<h3>
+  May you like <span class="product">{product}</span>
+</h3>
+
+<script>
+	if(window.location.search){
+  const urlParams = new URLSearchParams(window.location.search);
+  $('.firstname').text(urlParams.get('firstname'));
+  $('.interest').text(urlParams.get('interest'));
+  $('.product').text(urlParams.get('product'));
+}
+</script>

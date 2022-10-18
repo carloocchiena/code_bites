@@ -9,6 +9,6 @@ function binarySearch(arr, start, end, target) {
   if (arr[midIndex] === target) return true;
   
   if (arr[midIndex] > target) return binarySearch(arr, start, midIndex -1, target)
-  else return binarySearch(arr, midIndex - 1, end, target
+  else return binarySearch(arr, midIndex - 1, end, target)
 }
                            

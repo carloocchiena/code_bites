@@ -11,4 +11,6 @@ function binarySearch(arr, start, end, target) {
   if (arr[midIndex] > target) return binarySearch(arr, start, midIndex -1, target)
   else return binarySearch(arr, midIndex - 1, end, target)
 }
-                           
+
+
+console.log(binarySearch(arr, start, end, target));

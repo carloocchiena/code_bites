@@ -17,9 +17,10 @@ function mergeSort(arr) {
 while (leftIndex < leftArr.length && rightIndex < rightArr.length) {
   if (leftArr[leftIndex] < rightArr[rightIndex]) {
    resultArr.push(leftArr[leftIndex]);
-   leftIndex ++ 
+   leftIndex ++ ;
   } else {
   resultArr.push(rightArr[rightIndex]);
+    rightIndex ++ ;
   }
  }
 }

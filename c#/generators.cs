@@ -83,6 +83,3 @@ namespace csharp_generators
         }
     }
 }
-
-About
-csharp-tutorial/14_Generators.cs at master · ttu/csharp-tutorial

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Podcast Player</title>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <script>
+
+    // AZIONA PODCAST URL FROM ANCHOR
+    const RSS_URL = `https://anchor.fm/s/d612ed38/podcast/rss`;
+
+    $.ajax(RSS_URL, {
+    accepts: {
+        xml: "application/rss+xml"
+    },
+
+    dataType: "xml",
+
+        success: function(data) {
+            $(data)
+            .find("item")
+            .each(function() {
+                const el = $(this);
+
+                const template = `
+                    <article>
+                        <img src="${el.find("link").text()}/image/large.png" alt="">
+
+                        <h2>
+                        <a href="${el
+                            .find("link")
+                            .text()}" target="_blank" rel="noopener">
+                            ${el.find("title").text()}
+                        </a>
+                        </h2>
+                        <audio controls>
+                            <source src="${el.find("enclosure").attr('url')}"
+                            type="audio/mpeg">
+                        </audio>
+                    </article>
+                `;
+
+                document.body.insertAdjacentHTML("beforeend", template);
+            });
+        }
+    });
+    
+</script>
+
+</head>
+<body>
+  <h1>Aziona Podcast Player</h1>
+  <div id="player"></div>
+</body>
+</html>

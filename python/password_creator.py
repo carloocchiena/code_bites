@@ -9,7 +9,7 @@ def psw_maker():
     
     length=int(input("how many characters do you want your password to be?\n"))
     
-    for i in range(0, length):
+    for i in range(length + 1):
         char=random.choice(alpha)+random.choice(num)+random.choice(spec)+random.choice(alpha.upper())
         psw += str(char)
         

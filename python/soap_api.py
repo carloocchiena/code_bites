@@ -1,17 +1,19 @@
 # Import the needed modules
+import os
+from requests import Session
+import time
 from zeep import Client
 from zeep.transports import Transport
-from requests import Session
 
 # Set the endpoint URL
-url = 'url.com'
+url = os.environ['WSDL']
 
 # Create the SOAP client
 client = Client(url)
 
 # Set the credentials
-username = 'username'
-password = 'password'
+username = os.environ['USERNAME']
+password = os.environ['PASSWORD']
 
 # Make the SOAP request
 token_response = client.service.getToken(USERNAME=username, PASSWORD=password)
@@ -19,6 +21,9 @@ token_response = client.service.getToken(USERNAME=username, PASSWORD=password)
 # Process the response
 token = token_response.getTokenResult
 print(token_response)
+
+# wait for the process to grab the token
+time.sleep(5)
 
 # Set the custom headers
 headers = {

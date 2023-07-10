@@ -1,15 +1,16 @@
 # Import the needed modules
 import os
-from requests import Session
-import time
+
 from zeep import Client
 from zeep.transports import Transport
+from requests import Session
+import time
 
 # Set the endpoint URL
-url = os.environ['WSDL']
+wsdl = os.environ['WSDL']
 
 # Create the SOAP client
-client = Client(url)
+client = Client(wsdl)
 
 # Set the credentials
 username = os.environ['USERNAME']

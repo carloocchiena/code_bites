@@ -4,14 +4,14 @@ from zeep.transports import Transport
 from requests import Session
 
 # Set the endpoint URL
-url = 'https://akyraws.sentra.it/svcEnoi.svc?wsdl'
+url = 'url.com'
 
 # Create the SOAP client
 client = Client(url)
 
 # Set the credentials
-username = 'sentra.servizionline@sentra.it'
-password = 'S€n7r4$2022'
+username = 'username'
+password = 'password'
 
 # Make the SOAP request
 token_response = client.service.getToken(USERNAME=username, PASSWORD=password)

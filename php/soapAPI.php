@@ -18,11 +18,10 @@ try {
 
     $token = $token_response->getTokenResult;
     
-    echo $token;
+    echo "Token:" . $token;
 } catch (SoapFault $e) {
  
     echo "Errore: " . $e->getMessage();
 }
 
-echo $token
 ?>

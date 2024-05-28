@@ -4,7 +4,7 @@ from datetime import date
 
 
 today = date.today()
-link = "https://pulsee.it/offerte-casa-luce-gas"   
+link = "[site_link]"   
 r1  = req.get(link)   
 coverpage = r1.content   
 soup1 = BS4(coverpage, "html.parser")   
